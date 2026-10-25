@@ -1,0 +1,43 @@
+# Görevler
+
+- [x] `timedelta` içe aktarımı + `feed` metodu (Pokemon, Wizard, Fighter)
+- [x] `!feed` komutu (main.py)
+- [x] `if __name__ == "__main__":` koruması + Discord'suz oyun (oyun.py)
+- [x] Ekonomi: kazanılan maç başına +50 altın, `money`/`charm` nitelikleri
+- [x] Av sistemi: `hunt()` — 100 altın, %35 şans (+tılsımla %20)
+- [x] Mağaza: `shop()`/`buy()` — potion (+50 HP), charm (av şansı)
+- [x] Komutlar: `!balance`, `!shop`, `!buy`, `!hunt`
+- [x] Doğrulama: ödül, mağaza, yetersiz bakiye, av başarısı test edildi
+- [x] Hata düzeltmeleri: yenik Pokémon'a saldırıp sonsuz para kasma, kendine saldırma, yenik Pokémon ile saldırma engellendi; oyun.py'de hatalı komutlar artık çökertmiyor
+- [x] `oyna.bat` eklendi (çift tıkla oyna)
+- [x] Ücretsiz rastgele başlangıç Pokémon'u (sınıf + Pokémon rastgele): terminalde girişte/oyuncu değişince, Discord'da ilk komutta otomatik
+- [x] Av sistemi savaşa dönüştürüldü: 20 altın, vahşi rastgele Pokémon ile tur tur savaş; kazanınca +50 altın ve %60 (tılsımla %80) yakalama şansı
+- [x] Para ödülü yalnızca oyuncu Pokémon'larına veriliyor (vahşi Pokémon'a değil)
+- [x] Rakip bulma sistemi: `!find` (bot rakip bul + özelliklerini göster), `!fight` (savaş), `!skip` (geç, yenisini bul)
+- [x] Savaşlarda her tur sonunda iki tarafın HP'si gösteriliyor; av ve maç başında iki tarafın tüm özellikleri gösteriliyor
+- [x] `!komutlar` komutu; oyun.py açılınca ve Discord'da ilk Pokémon verilince komut listesi gösteriliyor
+- [ ] Yeni maç sistemi (`!find`/`!fight`/`!skip`) oyun içinde test edilmedi (sadece derleme kontrolü yapıldı)
+- [x] Çoklu saldırı türleri: normal, guclu, hizli, iyiles (herkes); atestopu, buz (Wizard); kombo, tekme (Fighter)
+- [x] %10 kritik vuruş, isabet oranına göre ıskalama; `!moves` komutu; `!attack @isim saldırı` ile seçim
+- [x] Olağanüstü olaylar: savaşta her tur %15 şansla şimşek, şifalı bitki, öfke saldırısı, güçlenme, kaya düşmesi, altın yağmuru
+- [x] %10 şansla efsanevi rakip (+30 güç, +200 can, yenince +100 bonus altın)
+- [x] Saldırı türleri ve olaylar internetsiz testle doğrulandı; efsanevi rakip ve `!find`/`!fight` akışı oyunda denenmedi
+- [x] Şov modu: spiker girişi/yorumları/finali, her saldırıya özel sahne metinleri, can çubukları, "zor durumda" ve NAKAVT anonsları, dramatik olay metinleri
+- [x] oyun.py: savaş satırları kısa aralıklarla akıyor (tur başlarında daha uzun bekleme)
+- [x] Düzeltme: Türkçe büyük harf (İYİLEŞME) ve iyileşme sonrası tutarsız can çubuğu
+- [x] Saldırı geliştirme: `!upgrade <saldırı>`; seviye başına +%15 hasar ve +3 isabet (iyileşmede +15); en fazla Sv.5; maliyet 40 × (seviye+1); `!moves` seviyeleri gösteriyor
+- [x] Yiyecek sistemi: `!feed` (ücretsiz elma, bekleme süreli; Wizard/Fighter farkları korunuyor), `!feed enerji/protein/vitamin/sekerleme` ücretli ve beklemesiz; `!foods` komutu; mağazada yiyecekler listeleniyor
+- [x] Yakalanan Pokémon'a saldırı seviyeleri aktarılıyor (yiyecek etkileri eski Pokémon'da kalıyor)
+- [x] Geliştirme ve yiyecekler internetsiz testle doğrulandı
+- [x] Gerçek PokeAPI verileri: isim, görsel, tür(ler), can/güç/savunma/hız temel istatistiklerden hesaplanıyor; internet yoksa rastgele değerlere düşüyor
+- [x] Tür avantajı PokeAPI tür tablosundan (önbellekli): x2 / x0.5; bağışıklıkta (x0) oyun akışı için x0.25 alt sınır
+- [x] Savunma hasarı en fazla %50 azaltıyor; hızlı olan ilk saldırıyor
+- [x] Kalkan saldırısı (hasar emer, savunma ve seviyeyle büyür, en fazla 200) ve Delici Saldırı (kalkanı, savunmayı ve sihirli kalkanı deler)
+- [x] Otomatik savaşta akıllı seçim: kalkan varken tekrar kalkan, can doluyken iyileşme seçilmiyor; kalkanlar savaş başında ve sonunda sıfırlanıyor
+- [x] Squirtle - Charmander testiyle doğrulandı
+- [x] Sıra tabanlı savaş (`Battle` sınıfı): oyuncu hamlesini seçiyor, ardından bot oynuyor; hızlı olan ilk hamleyi yapıyor
+- [x] Savaş komutları: `!a <saldırı>`, `!parry` (%75 hasar engeli, %30 karşı saldırı), `!item <eşya>` (sırayı harcar), `!flee`, `!durum`
+- [x] Bot yapay zekası: düşük canda iyileşme, bazen parry, diğer durumlarda akıllı saldırı seçimi
+- [x] Savaş sırasında find/skip/fight/hunt/attack/feed/buy/upgrade kilitli; geçersiz hamle sırayı harcamıyor
+- [x] Ödüller savaş sonunda veriliyor (+50, efsanevi +100, avda yakalama); oyun.py savaşta `[SAVAŞ]` gösteriyor
+- [x] Tam bir savaş testle doğrulandı
